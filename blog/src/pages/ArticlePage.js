@@ -9,9 +9,10 @@ import articles from './article-content';
    
   const name = match.params.name; 
   const article = articles.find(article => article.name === name)
+  console.log(article); 
   
   if(!article) return <NotFoundPage />
-  
+
   const otherArticles = articles.filter(article => article.name !== name );
 
   return (
